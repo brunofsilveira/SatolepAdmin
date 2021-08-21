@@ -13,13 +13,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": ".",
     "paths": {
-      "@app/*": ["./app/*"],
       "@assets/*": ["./public/assets/*"],
-      "@atomic/*": ["./app/atomic/*"],
-      "@common/*": ["./app/common/*"],
-      "@features/*": ["./app/features/*"],
-      "@libs/*": ["./app/libs/*"],
+      "@atomic/*": ["src/app/atomic/*"],
+      "@common/*": ["src/app/common/*"],
+      "@features/*": ["src/app/features/*"],
+      "@libs/*": ["src/app/libs/*"],
+      "@app/*": ["src/app/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
