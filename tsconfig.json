@@ -15,12 +15,12 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["./public/assets/*"],
+      "@assets/*": ["public/assets/*"],
       "@atomic/*": ["src/app/atomic/*"],
       "@common/*": ["src/app/common/*"],
       "@features/*": ["src/app/features/*"],
-      "@libs/*": ["src/app/libs/*"],
-      "@app/*": ["src/app/*"]
+      "@app/*": ["src/app/*"],
+      "@libs/*": ["src/libs/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
