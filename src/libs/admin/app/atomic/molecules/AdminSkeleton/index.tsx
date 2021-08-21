@@ -14,13 +14,17 @@ export default function AdminSkeleton({
 }: AdminSkeletonProps): PropsWithChildren<JSX.Element> {
   return (
     <GridTemplateArea
-      gridTemplateAreas="'header header' 'nav article'"
-      gridTemplateRows={`${pxToRem(60)} 1fr`}
-      gridTemplateColumns={`${pxToRem(250)} 1fr`}
+      gridProps={{
+        gridTemplateAreas: "'header header' 'nav article'",
+        gridTemplateRows: `${pxToRem(60)} 1fr`,
+        gridTemplateColumns: `${pxToRem(250)} 1fr`,
+      }}
     >
-      <Header gridArea='header' />
-      <Nav gridArea='nav' />
-      <Article gridArea='article'>{children}</Article>
+      <Header gridProps={{ gridArea: 'header' }} />
+      <Nav gridProps={{ gridArea: 'nav' }} />
+      <Article gridProps={{ gridArea: 'article' }}>
+        {children}
+      </Article>
     </GridTemplateArea>
   )
 }

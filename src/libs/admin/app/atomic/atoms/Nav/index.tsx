@@ -1,18 +1,17 @@
-import { Box, ResponsiveValue } from '@chakra-ui/react'
+import { Box, GridProps } from '@chakra-ui/react'
 import React, { PropsWithChildren } from 'react'
-import { Property } from 'csstype'
 
 type NavProps = {
   children?: JSX.Element
-  gridArea?: ResponsiveValue<Property.GridArea>
+  gridProps?: GridProps
 }
 
 export default function Nav({
   children,
-  gridArea,
+  gridProps,
 }: NavProps): PropsWithChildren<JSX.Element> {
   return (
-    <Box as='nav' gridArea={gridArea}>
+    <Box as='nav' {...gridProps}>
       {children}
     </Box>
   )
