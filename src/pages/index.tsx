@@ -1,9 +1,11 @@
-import { Box, Heading } from '@chakra-ui/react'
+import { Box, Button, useColorMode } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
 const Home: NextPage = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
+
   return (
     <div>
       <Head>
@@ -16,15 +18,15 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Heading bgGradient='linear(to-r, green.200, pink.500 calc(20px + 20px))'>
-          Chakra-UI: Create accessible React apps with speed
-        </Heading>
-
         <Box
           w='100%'
-          h='200px'
-          bgGradient='linear(to-r, green.200, pink.500)'
+          h='50px'
+          bgGradient='linear(to-r, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500, blue.400, blue.600, blue.500)'
         />
+
+        <Button onClick={toggleColorMode}>
+          Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+        </Button>
       </main>
 
       <footer>

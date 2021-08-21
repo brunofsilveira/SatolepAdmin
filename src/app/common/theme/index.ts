@@ -1,16 +1,26 @@
-import { extendTheme, ThemeConfig } from '@chakra-ui/react'
+import { extendTheme, ThemeConfig, withDefaultColorScheme } from '@chakra-ui/react'
 
-import { breakpoints } from './breakpoints';
+import { breakpoints } from './breakpoints'
+import { colors } from './colors'
+import { components } from './components/index'
 import { fonts } from './fonts'
+import { globalStyles } from './globalStyles'
 
 const config: ThemeConfig = {
+  initialColorMode: 'dark',
   useSystemColorMode: true,
 }
 
-const overrides = extendTheme({
-  breakpoints,
-  config,
-  fonts,
-})
+const theme = extendTheme(
+  {
+    breakpoints,
+    colors,
+    components,
+    config,
+    fonts,
+    styles: globalStyles,
+  },
+  withDefaultColorScheme({ colorScheme: 'body.primary' }),
+)
 
-export default extendTheme(overrides)
+export default theme
