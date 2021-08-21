@@ -12,7 +12,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "@app/*": ["./app/*"],
+      "@assets/*": ["./public/assets/*"],
+      "@atomic/*": ["./app/atomic/*"],
+      "@common/*": ["./app/common/*"],
+      "@features/*": ["./app/features/*"],
+      "@libs/*": ["./app/libs/*"],
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
