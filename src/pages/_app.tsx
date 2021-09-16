@@ -1,5 +1,3 @@
-import './teste.css'
-
 import SatolepProvider from '@atomic/template/SatolepProvider'
 import type { AppProps } from 'next/app'
 

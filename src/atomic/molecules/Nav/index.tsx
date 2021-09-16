@@ -26,7 +26,7 @@ export default function Nav({
   gridProps,
 }: NavProps): PropsWithChildren<JSX.Element> {
   return (
-    <Box as='nav' overflowY='auto' {...gridProps}>
+    <Box as='nav' position='relative' overflowY='auto' {...gridProps}>
       {categories?.map((category, index) => (
         <NavSection
           key={index}
