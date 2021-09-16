@@ -58,7 +58,7 @@
         "printWidth": 70,
         "jsxSingleQuote": true,
         "bracketSpacing": true,
-        "jsxBracketSameLine": true,
+        "jsxBracketSameLine": false,
         "arrowParens": "avoid"
       }
     ],

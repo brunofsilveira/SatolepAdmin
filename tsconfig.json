@@ -16,8 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["public/assets/*"],
-      "@atomic/*": ["src/app/atomic/*"],
-      "@common/*": ["src/app/common/*"],
+      "@atomic/*": ["src/atomic/*"],
+      "@common/*": ["src/common/*"],
       "@features/*": ["src/app/features/*"],
       "@app/*": ["src/app/*"],
       "@libs/*": ["src/libs/*"]
